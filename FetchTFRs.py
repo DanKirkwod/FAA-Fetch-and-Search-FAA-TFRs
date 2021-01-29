@@ -66,12 +66,12 @@ for index, row in dataframe.iterrows():
            DistVerUpper="Unlimited"
 
     #Is the TFR currently Active or Upcoming?
-        if tfrStart<datetime.now() and tfrEnd>datetime.now():
-            tfrActive="Active"
-        elif tfrStart<datetime.now() and tfrEnd<datetime.now():
-           tfrActive="Expired"
-        elif tfrStart>datetime.now() and tfrEnd>datetime.now():
-           tfrActive="Upcoming"
-        else:
-           tfrActive="Undetermined"
-        print(str(notamID)+" "+str(tfrActive)+": "+str(tfrStart)+" - "+str(tfrEnd)+" up to "+str(DistVerUpper))
+    if tfrStart<datetime.now() and tfrEnd>datetime.now():
+        tfrActive="Active"
+    elif tfrStart<datetime.now() and tfrEnd<datetime.now():
+       tfrActive="Expired"
+    elif tfrStart>datetime.now() and tfrEnd>datetime.now():
+       tfrActive="Upcoming"
+    else:
+       tfrActive="Undetermined"
+    print(str(notamID)+" "+str(tfrActive)+": "+str(tfrStart)+" - "+str(tfrEnd)+" up to "+str(DistVerUpper))
