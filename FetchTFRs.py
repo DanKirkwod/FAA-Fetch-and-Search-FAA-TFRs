@@ -62,8 +62,10 @@ for index, row in dataframe.iterrows():
     #How High does the TFR go?
         if root.findtext('.//uomDistVerUpper') == 'FT':
             DistVerUpper=str(root.findtext('.//valDistVerUpper'))+" FT"
+        elif root.findtext('.//valDistVerUpper') == '910'
+            DistVerUpper="Unlimited"
         else:
-           DistVerUpper="Unlimited"
+           DistVerUpper=str(root.findtext('.//valDistVerUpper'))+"00 FT"
 
     #Is the TFR currently Active or Upcoming?
     if tfrStart<datetime.now() and tfrEnd>datetime.now():
